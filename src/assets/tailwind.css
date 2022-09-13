@@ -3,3 +3,34 @@
 @tailwind components;
 
 @tailwind utilities;
+
+@layer base {
+  p {
+    @apply text-gray-600 text-sm;
+  }
+}
+
+@layer components {
+  .dec-h1::before {
+    content: "";
+    @apply block absolute -inset-2 -skew-y-3 bg-pink-500 z-10;
+  }
+
+  .dec-h1::after {
+    content: "";
+    @apply block absolute -inset-2 -skew-y-2 bg-gray-700/70 z-0 translate-x-2 translate-y-1;
+  }
+
+  .siteName {
+    font-family: "Covered By Your Grace", serif;
+    @apply italic;
+  }
+
+  .btn-print {
+    @apply text-lg text-center px-4 py-3 relative rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-colors disabled:cursor-not-allowed disabled:opacity-40;
+  }
+
+  .title {
+    @apply text-gray-700 font-bold tracking-wide mb-6;
+  }
+}

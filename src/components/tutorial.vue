@@ -1,32 +1,37 @@
 <template>
-  <article class="text-center mb-3">
-    <h1 class="text-2xl font-bold mb-3">CT Yeh 路段配速器 小抄產生器</h1>
-    <p class="mb-2">
-      請至
-      <a
-        href="https://www.ctyeh.com/routelist"
-        target="_blank"
-        class="hover:underline text-green-700"
-        title="前往 CT Yeh 公路車基地"
-      >
-        CT Yeh 公路車基地
-      </a>
-      取得配速小抄， 再進行上傳與列印。
-    </p>
-    <p>列印後剪下，經護貝或用膠帶黏貼正反兩面即可防水。</p>
-  </article>
-  <div class="flex gap-x-4 justify-center">
-    <uploader @handleUpload="handleUpload" />
-    <button
-      onclick="window.print()"
-      v-if="Array.isArray(STEPS) && STEPS.length"
-      class="text-lg text-center px-4 py-3 relative block border rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-colors"
-      title="列印小抄"
-      type="button"
-    >
-      <i class="fas fa-print"></i>
-      列印小抄
-    </button>
+  <div class="md:flex gap-x-10 items-center justify-between px-5 lg:px-0">
+    <article class="w-full mb-3">
+      <h2 class="text-2xl title">如何上手？</h2>
+      <p class="mb-2">
+        請至
+        <a
+          href="https://www.ctyeh.com/routelist"
+          target="_blank"
+          class="hover:underline text-green-700"
+          title="前往 CT Yeh 公路車基地"
+        >
+          CT Yeh 公路車基地
+        </a>
+        取得配速小抄， 再進行上傳與列印。
+      </p>
+      <p>列印後剪下，經護貝或用膠帶黏貼正反兩面即可防水。</p>
+    </article>
+
+    <div class="w-full md:flex gap-x-4 justify-center">
+      <uploader @handleUpload="handleUpload" class="mb-3" />
+      <div class="text-center">
+        <button
+          :disabled="!Array.isArray(STEPS) || !STEPS.length"
+          onclick="window.print()"
+          class="btn-print"
+          title="列印小抄"
+          type="button"
+        >
+          <i class="fas fa-print text-2xl fa-fw"></i>
+          列印小抄
+        </button>
+      </div>
+    </div>
   </div>
 </template>
 

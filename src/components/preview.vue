@@ -9,6 +9,19 @@
       <type_B :STEPS="STEPS" />
       <type_B2 :STEPS="STEPS" />
     </div>
+
+    <div class="text-center py-5 print:hidden">
+      <button
+        :disabled="!Array.isArray(STEPS) || !STEPS.length"
+        onclick="window.print()"
+        class="btn-print"
+        title="列印小抄"
+        type="button"
+      >
+        <i class="fas fa-print text-2xl fa-fw"></i>
+        列印小抄
+      </button>
+    </div>
   </div>
 </template>
 

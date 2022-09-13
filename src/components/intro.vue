@@ -1,6 +1,6 @@
 <template>
-  <article class="md:flex gap-x-4 items-center justify-between">
-    <div class="w-full px-3 lg:px-0">
+  <article class="md:flex gap-x-10 items-center justify-between">
+    <div class="w-full px-3 lg:px-0 py-5 lg:py-0">
       <h2 class="text-2xl title">
         <i class="fas fa-edit"></i>
         自由編輯，隨興發揮
