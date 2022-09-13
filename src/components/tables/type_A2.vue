@@ -3,9 +3,7 @@
     class="table-auto border table-striped table table-sm border-gray-600"
     contenteditable
   >
-    <caption class="border-dashed border border-gray-400 print:border-0">
-      <br />
-    </caption>
+    <myCaption />
     <tbody>
       <template v-for="(step, i) in STEPS" :key="`step_${i}`">
         <tr>
@@ -21,19 +19,16 @@
         </tr>
       </template>
     </tbody>
-    <caption
-      class="border-dashed border border-gray-400 print:border-0"
-      style="caption-side: bottom"
-    >
-      <br />
-    </caption>
+    <myCaption style="caption-side: bottom" />
   </table>
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
+import myCaption from "../myCaption.vue";
 
 export default defineComponent({
+  components: { myCaption },
   props: {
     STEPS: {
       type: Array as PropType<STEP[]>,

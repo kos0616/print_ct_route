@@ -1150,6 +1150,11 @@
   dependencies:
     "@types/node" "*"
 
+"@types/croppie@^2.6.1":
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/@types/croppie/-/croppie-2.6.1.tgz#9c4064349e9c552675aafbee20b50b4f945166e0"
+  integrity sha512-5hUL4mzuE0mzva4KXPxrvBlargTcs9bqisjQBOZ76W6FkxoCvPVvXMSwtevUhD6r+YqgBh3gumR3gBhxuc4wdQ==
+
 "@types/eslint-scope@^3.7.3":
   version "3.7.4"
   resolved "https://registry.yarnpkg.com/@types/eslint-scope/-/eslint-scope-3.7.4.tgz#37fc1223f0786c39627068a12e94d6e6fc61de16"
@@ -2594,6 +2599,11 @@ cosmiconfig@^7.0.0:
     parse-json "^5.0.0"
     path-type "^4.0.0"
     yaml "^1.10.0"
+
+croppie@^2.6.5:
+  version "2.6.5"
+  resolved "https://registry.yarnpkg.com/croppie/-/croppie-2.6.5.tgz#67d76855b2983bdcd8aa348367398b2b8ef277cf"
+  integrity sha512-IlChnVUGG5T3w2gRZIaQgBtlvyuYnlUWs2YZIXXR3H9KrlO1PtBT3j+ykxvy9eZIWhk+V5SpBmhCQz5UXKrEKQ==
 
 cross-spawn@^5.0.1:
   version "5.1.0"
