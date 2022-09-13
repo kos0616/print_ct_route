@@ -1,7 +1,11 @@
 <template>
   <table
     class="table-auto border table-striped table table-sm border-gray-600 mx-auto"
+    contenteditable
   >
+    <caption class="border border-gray-600 border-b-0">
+      &nbsp;
+    </caption>
     <tbody>
       <template v-for="(step, i) in STEPS" :key="`step_${i}`">
         <tr>
@@ -17,6 +21,12 @@
         </tr>
       </template>
     </tbody>
+    <caption
+      class="border border-gray-600 border-t-0"
+      style="caption-side: bottom"
+    >
+      &nbsp;
+    </caption>
   </table>
 </template>
 
