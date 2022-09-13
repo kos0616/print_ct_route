@@ -97,7 +97,6 @@ export default defineComponent({
           (n) => n.length > 1
         );
         STEPS.value = formatCSV(result);
-        console.log(STEPS.value);
       };
     };
 
