@@ -1,9 +1,13 @@
 <template>
   <div>
     <!-- 全尺寸 -->
-    <full :STEPS="STEPS" />
+    <full :STEPS="STEPS" class="mb-5" />
 
-    <div class="flex gap-x-4 justify-center items-start pt-5">
+    <p class="print:hidden text-center mb-3">
+      <i class="text-blue-500 fas fa-info-circle"></i>
+      虛線處可填寫任意內容，虛線不會印出。
+    </p>
+    <div class="flex gap-x-4 justify-center items-start">
       <type_A :STEPS="STEPS" class="mb-5" />
       <type_A2 :STEPS="STEPS" class="mb-5" />
 
