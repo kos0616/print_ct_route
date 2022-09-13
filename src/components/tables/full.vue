@@ -1,6 +1,7 @@
 <template>
   <table
     class="w-1/2 table-auto table-striped border border-gray-600 table mx-auto"
+    contenteditable
   >
     <thead>
       <tr>
@@ -31,11 +32,21 @@
         <td class="text-center">{{ step.cumulative_time }}</td>
       </tr>
     </tbody>
+    <caption
+      class="border border-gray-600 border-t-0"
+      style="caption-side: bottom"
+    >
+      <div class="flex w-full py-1 px-3">
+        <span></span>
+        <span class="ml-auto">{{ now }}</span>
+      </div>
+    </caption>
   </table>
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
+import DAY from "dayjs";
 
 /** 全幅版面 */
 export default defineComponent({
@@ -44,6 +55,11 @@ export default defineComponent({
       type: Array as PropType<STEP[]>,
       default: () => [],
     },
+  },
+  setup: () => {
+    const now = DAY().format("YYYY/MM/DD");
+
+    return { now };
   },
 });
 </script>

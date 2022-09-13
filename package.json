@@ -10,6 +10,7 @@
   "dependencies": {
     "autoprefixer": "^10.4.8",
     "core-js": "^3.8.3",
+    "dayjs": "^1.11.5",
     "postcss": "^8.4.16",
     "tailwindcss": "^3.1.8",
     "vue": "^3.2.13"
