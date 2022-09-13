@@ -1,12 +1,14 @@
 <template>
-  <table class="table-auto border table-striped table table-sm border-gray-600">
+  <table
+    class="table-auto border table-striped table table-sm border-gray-600 mx-auto"
+  >
     <tbody>
       <template v-for="(step, i) in STEPS" :key="`step_${i}`">
         <tr>
           <td class="text-right">
             {{ step.cumulative_distance }}<small>k</small>
           </td>
-          <td class="text-right">{{ step.wattage }}<small>w</small></td>
+          <td class="text-right">{{ step.average_speed }}<small>k/h</small></td>
           <td>{{ step.cumulative_time }}</td>
         </tr>
       </template>

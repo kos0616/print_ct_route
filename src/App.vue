@@ -128,7 +128,7 @@ export default defineComponent({
     -webkit-print-color-adjust: exact;
   }
   @page {
-    size: A4 landscape;
+    size: A4;
     margin: 0px;
   }
 }

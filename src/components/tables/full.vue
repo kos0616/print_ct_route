@@ -1,5 +1,7 @@
 <template>
-  <table class="w-1/2 table-auto table-striped border border-gray-600 table">
+  <table
+    class="w-1/2 table-auto table-striped border border-gray-600 table mx-auto"
+  >
     <thead>
       <tr>
         <th colspan="2">區段</th>

@@ -1,13 +1,18 @@
 <template>
-  <div
-    class="flex flex-wrap gap-y-5 gap-x-2 justify-between items-start h-full"
-  >
-    <full :STEPS="STEPS" />
-    <type_A :STEPS="STEPS" />
-    <type_A2 :STEPS="STEPS" />
+  <div class="grid gap-y-5 gap-x-2 justify-center items-start h-full">
+    <!-- 全尺寸 -->
+    <div class="col-span-2">
+      <full :STEPS="STEPS" />
+    </div>
+    <div>
+      <!-- 配速 -->
+      <type_A :STEPS="STEPS" class="mb-5" />
+      <type_B :STEPS="STEPS" />
+    </div>
 
     <div>
-      <type_B :STEPS="STEPS" class="mb-10" />
+      <!-- 配瓦 -->
+      <type_A2 :STEPS="STEPS" class="mb-5" />
       <type_B2 :STEPS="STEPS" />
     </div>
   </div>

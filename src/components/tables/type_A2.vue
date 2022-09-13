@@ -1,5 +1,7 @@
 <template>
-  <table class="table-auto border table-striped table table-sm border-gray-600">
+  <table
+    class="table-auto border table-striped table table-sm border-gray-600 mx-auto"
+  >
     <tbody>
       <template v-for="(step, i) in STEPS" :key="`step_${i}`">
         <tr>
