@@ -1,5 +1,8 @@
 <template>
-  <caption class="border-dashed border border-gray-400 print:border-0 relative">
+  <caption
+    :class="{ 'border-dashed border border-gray-400 ': !top_img }"
+    class="print:border-0 relative"
+  >
     <imgUploader
       @change="handleImgUpload"
       class="absolute left-0 top-0"
