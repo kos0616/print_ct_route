@@ -1,10 +1,10 @@
 <template>
   <table
-    class="table-auto border table-striped table table-sm border-gray-600 mx-auto"
+    class="table-auto border table-striped table table-sm border-gray-600"
     contenteditable
   >
-    <caption class="border border-gray-600 border-b-0">
-      &nbsp;
+    <caption class="border-dashed border border-gray-400 print:border-0">
+      <br />
     </caption>
     <tbody>
       <template v-for="(step, i) in STEPS" :key="`step_${i}`">
@@ -22,10 +22,10 @@
       </template>
     </tbody>
     <caption
-      class="border border-gray-600 border-t-0"
+      class="border-dashed border border-gray-400 print:border-0"
       style="caption-side: bottom"
     >
-      &nbsp;
+      <br />
     </caption>
   </table>
 </template>

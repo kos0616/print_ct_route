@@ -1,6 +1,6 @@
 <template>
   <table
-    class="w-1/2 table-auto table-striped border border-gray-600 table mx-auto"
+    class="table-auto table-striped border border-gray-600 table mx-auto"
     contenteditable
   >
     <thead>

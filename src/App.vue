@@ -41,10 +41,11 @@
       </footer>
     </div>
 
-    <div v-if="Array.isArray(STEPS) && STEPS.length" class="px-3 py-2 lg:p-5">
+    <div
+      v-if="Array.isArray(STEPS) && STEPS.length"
+      class="px-3 py-2 lg:p-5 print:p-0"
+    >
       <preview :modelValue="STEPS" />
-      <!-- <button @click="print">print</button> -->
-      <!-- {{ STEPS }} -->
     </div>
   </div>
 </template>

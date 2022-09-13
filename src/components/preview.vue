@@ -1,18 +1,13 @@
 <template>
-  <div class="grid gap-y-5 gap-x-2 justify-center items-start h-full">
+  <div>
     <!-- 全尺寸 -->
-    <div class="col-span-2">
-      <full :STEPS="STEPS" />
-    </div>
-    <div>
-      <!-- 配速 -->
-      <type_A :STEPS="STEPS" class="mb-5" />
-      <type_B :STEPS="STEPS" />
-    </div>
+    <full :STEPS="STEPS" />
 
-    <div>
-      <!-- 配瓦 -->
+    <div class="flex gap-x-4 justify-center items-start pt-5">
+      <type_A :STEPS="STEPS" class="mb-5" />
       <type_A2 :STEPS="STEPS" class="mb-5" />
+
+      <type_B :STEPS="STEPS" />
       <type_B2 :STEPS="STEPS" />
     </div>
   </div>
