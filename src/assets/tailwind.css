@@ -13,7 +13,8 @@
 @layer components {
   .dec-h1::before {
     content: "";
-    @apply block absolute -inset-2 -skew-y-3 bg-pink-500 z-10;
+    
+    @apply block absolute -inset-2 -skew-y-3 z-10 bg-orange-500;
   }
 
   .dec-h1::after {
