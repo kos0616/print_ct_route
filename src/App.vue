@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-6xl mx-auto py-5 px-5">
+  <div class="max-w-5xl mx-auto py-5 px-5">
     <div class="print:hidden">
       <article class="text-center mb-3">
         <h1 class="text-2xl font-bold mb-3">CT Yeh 路段配速器 小抄產生器</h1>
@@ -41,11 +41,15 @@
       </footer>
     </div>
 
+    <intro class="print:hidden my-10 mx-auto" />
+
     <div
       v-if="Array.isArray(STEPS) && STEPS.length"
       class="px-3 py-2 lg:p-5 print:p-0"
     >
-      <preview :modelValue="STEPS" />
+      <div class="w-full overflow-x-auto xl:overflow-visible">
+        <preview :modelValue="STEPS" />
+      </div>
     </div>
   </div>
 </template>
@@ -54,10 +58,11 @@
 import { defineComponent, ref } from "vue";
 import uploader from "./components/uploader.vue";
 import preview from "./components/preview.vue";
+import intro from "./components/intro.vue";
 
 export default defineComponent({
   name: "App",
-  components: { uploader, preview },
+  components: { uploader, preview, intro },
   setup() {
     /** 區段 */
     const STEPS = ref<STEP[]>([]);
@@ -135,6 +140,10 @@ export default defineComponent({
 </style>
 
 <style lang="postcss">
+p {
+  @apply text-gray-600 text-sm;
+}
+
 /* @media screen {
   .A4 {
     aspect-ratio: 1.41 / 1;
