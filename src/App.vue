@@ -16,8 +16,7 @@
 
     <div
       :class="{
-        'border-b border-gray-300 border-dashed':
-          Array.isArray(STEPS) && STEPS.length,
+        'border-b border-gray-300 border-dashed': isUpdated,
       }"
       class="py-20"
       id="intro"
@@ -26,10 +25,7 @@
     </div>
   </div>
 
-  <div
-    v-if="Array.isArray(STEPS) && STEPS.length"
-    class="px-3 py-2 lg:p-5 print:p-0"
-  >
+  <div v-if="isUpdated" class="px-3 py-2 lg:p-5 print:p-0">
     <div class="w-full overflow-x-auto xl:overflow-visible">
       <preview :modelValue="STEPS" />
     </div>
@@ -48,7 +44,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { computed, defineComponent, ref } from "vue";
 import preview from "./components/preview.vue";
 import intro from "./components/intro.vue";
 import aboutCT from "./components/aboutCT.vue";
@@ -68,7 +64,11 @@ export default defineComponent({
       STEPS.value = arr;
     };
 
-    return { handleUploaded, STEPS };
+    const isUpdated = computed(
+      () => Array.isArray(STEPS.value) && STEPS.value.length
+    );
+
+    return { handleUploaded, STEPS, isUpdated };
   },
 });
 </script>

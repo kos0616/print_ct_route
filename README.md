@@ -13,8 +13,16 @@
 
 ## Future
 
-1. [ ] 字形大小調整功能
-2. [ ] 國際化
+* [ ] 字形大小調整功能
+* [ ] 國際化
+
+## Todo
+
+* [ ] RWD
+* [ ] Table Hidding function
+* [ ] Auto hide Full-size Table in mobile device
+* [ ] Table Styling
+* [ ] Table Pannel
 
 ## Dev
 

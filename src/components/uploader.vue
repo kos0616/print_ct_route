@@ -4,11 +4,11 @@
       class="border-green-800 rounded-lg text-white bg-green-600 hover:bg-green-700 transition-colors max-w-sm"
     >
       <label
-        title="上傳 ride_plan.csv"
         class="text-lg text-center px-4 py-3 relative block cursor-pointer"
+        title="匯入 ride_plan.csv"
       >
         <i class="fa-solid fa-file-csv text-2xl fa-fw" aria-hidden="true" />
-        上傳 ride_plan.csv
+        匯入 ride_plan.csv
         <input
           @change="$emit('handleUpload', $event)"
           type="file"
@@ -33,7 +33,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 
-/** 檔案上傳 */
+/** 檔案匯入 */
 export default defineComponent({
   name: "uploader-tool",
 });
