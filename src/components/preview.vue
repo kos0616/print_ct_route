@@ -19,7 +19,9 @@
       </div>
     </div>
 
-    <div class="text-center py-5 print:hidden">
+    <div
+      class="text-center py-5 print:hidden border-t border-dashed border-gray-400 mt-5"
+    >
       <button
         :disabled="!Array.isArray(STEPS) || !STEPS.length"
         onclick="window.print()"

@@ -3,7 +3,7 @@
     class="border-green-800 rounded-lg text-white bg-green-600 hover:bg-green-700 transition-colors"
   >
     <label
-      class="text-lg text-center px-4 py-3 relative block cursor-pointer"
+      class="md:text-lg text-center px-4 py-3 relative block cursor-pointer"
       title="匯入 ride_plan.csv"
     >
       <template v-if="isUpload">
@@ -11,7 +11,7 @@
         匯入成功
       </template>
       <template v-else>
-        <i class="fa-solid fa-file-csv text-2xl fa-fw" aria-hidden="true" />
+        <i class="fa-solid fa-file-csv md:text-2xl fa-fw" aria-hidden="true" />
         匯入 ride_plan.csv
       </template>
       <input

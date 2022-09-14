@@ -5,12 +5,12 @@
     </div>
 
     <div class="px-5 lg:px-0">
-      <div class="lg:py-10 mb-10">
+      <div class="py-5 mb-10">
         <aboutCT class="max-w-5xl mx-auto" />
       </div>
     </div>
 
-    <div class="bg-stone-100 lg:py-10">
+    <div class="bg-stone-100 py-3 lg:py-10">
       <intro class="mx-auto max-w-5xl" />
     </div>
 
@@ -18,7 +18,7 @@
       :class="{
         'border-b border-gray-300 border-dashed': isUpload,
       }"
-      class="py-20"
+      class="py-10"
       id="intro"
     >
       <tutorial @upload="handleUploaded" class="mx-auto max-w-5xl" />

@@ -13,6 +13,10 @@
   p {
     @apply text-gray-600 text-sm;
   }
+
+  ol>li {
+    @apply mb-2 text-gray-600 text-sm;
+  }
 }
 
 @layer components {
@@ -32,7 +36,7 @@
   }
 
   .btn-print {
-    @apply text-lg text-center px-4 py-3 relative rounded-md bg-blue-500 text-white transition-colors;
+    @apply md:text-lg text-center px-4 py-3 relative rounded-md bg-blue-500 text-white transition-colors;
   }
 
   .btn-print:disabled {

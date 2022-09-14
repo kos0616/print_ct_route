@@ -4,7 +4,7 @@
       class="w-full sm:w-2/3 lg-w-1/2 mx-auto lg:w-full px-3 xl:px-0 py-5 lg:py-0"
     >
       <h2 class="text-2xl title">
-        <i class="fas fa-edit" aria-hidden="true" />
+        <i class="fas fa-edit fa-fw text-orange-500" aria-hidden="true" />
         自由編輯，隨興發揮
       </h2>
       <div class="mb-5">

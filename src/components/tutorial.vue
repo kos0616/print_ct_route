@@ -1,24 +1,27 @@
 <template>
   <div class="md:flex gap-x-10 items-center justify-between px-5 xl:px-0">
     <article class="w-full sm:w-2/3 lg-w-1/2 mb-5 md:mb-0 mx-auto">
-      <h2 class="text-2xl title">如何上手？</h2>
-      <p class="mb-2">
-        請至
-        <a
-          href="https://www.ctyeh.com/routelist"
-          target="_blank"
-          class="hover:underline text-green-700"
-          title="前往 CT Yeh 公路車基地"
-        >
-          CT Yeh 公路車基地
-        </a>
-        取得配速小抄， 再進行編輯與列印。
-      </p>
-      <p>列印後剪下，經護貝或用膠帶黏貼正反兩面即可防水。</p>
+      <h2 class="text-2xl title">我該如何上手？</h2>
+      <ol class="list-decimal pl-5">
+        <li>
+          前往
+          <b>CT Yeh 公路車基地</b>，在單車路線頁選擇配速。
+        </li>
+        <li>下載小抄 檔名為 <b>ride_plan.csv</b>。</li>
+        <li>
+          <b class="bg-green-600 text-white px-1 rounded">匯入 ride_plan.csv</b>
+          匯入成功可在底下預覽與編輯。
+        </li>
+        <li>
+          <b class="bg-blue-500 text-white px-1 rounded">列印小抄</b>
+          取得您獨一無二的配速表，或是上傳至 7-11 雲端列印。
+        </li>
+        <li>列印後剪下，經護貝或用膠帶黏貼正反兩面即可防水。</li>
+      </ol>
     </article>
 
     <div
-      class="w-full sm:w-2/3 lg-w-1/2 md:flex gap-x-4 justify-center text-center items-start mx-auto"
+      class="w-full sm:w-2/3 lg-w-1/2 flex gap-x-4 justify-center text-center items-start mx-auto"
     >
       <div class="mb-5 md:mb-0">
         <uploader @handleUpload="handleUpload" :isUpload="isUpload" />
@@ -31,17 +34,26 @@
           Get ride_plan.csv
         </a>
       </div>
-
-      <button
-        :disabled="!isUpload"
-        onclick="window.print()"
-        class="btn-print"
-        title="列印小抄"
-        type="button"
-      >
-        <i class="fas fa-print text-2xl fa-fw" aria-hidden="true" />
-        列印小抄
-      </button>
+      <div class="text-center">
+        <button
+          :disabled="!isUpload"
+          onclick="window.print()"
+          class="btn-print"
+          title="列印小抄"
+          type="button"
+        >
+          <i class="fas fa-print md:text-2xl fa-fw" aria-hidden="true" />
+          列印小抄
+        </button>
+        <a
+          href="https://print.ibon.com.tw/ibonprinter"
+          target="_blank"
+          class="underline text-green-700 my-8 lg:mt-3 lg:mb-0 block"
+          title="使用 7-11 雲端列印"
+        >
+          7-11 雲端列印
+        </a>
+      </div>
     </div>
   </div>
 </template>

@@ -9,22 +9,18 @@
       class="w-full h-auto aspect-video mb-3"
     />
 
-    <article class="w-full">
+    <article class="sm:w-2/3 lg:w-full pt-3 lg:pt-0 mx-auto">
       <h2 class="text-2xl title mb-3">
+        <i class="fa-regular fa-lightbulb fa-fw text-orange-500"></i>
+        啟發自
         <a
           href="https://www.youtube.com/c/CTYeh"
           target="_blank"
           class="underline"
           title="前往 CT Yeh 的頻道"
-        >
-          <i
-            class="fab fa-youtube fa-fw mr-2"
-            style="color: #ff0000"
-            aria-hidden="true"
-          ></i
           >CT Yeh</a
         >
-        一切的源起
+        的配速器
       </h2>
       <blockquote
         cite="https://www.youtube.com/c/CTYeh/about"
@@ -52,13 +48,13 @@
 
       <blockquote
         cite="https://github.com/kos0616/print_ct_route"
-        class="border border-stone-300 border-dashed py-2 px-3 rounded-md relative mt-5 md:mt-10"
+        class="border border-stone-300 border-dashed py-2 px-3 rounded-md relative mt-10"
       >
         <i
           class="fa-solid fa-scissors absolute left-0 top-2/3 -translate-x-1/2 -rotate-90"
         />
         " 此站是在看了 CT Yeh 的 AI
-        配速產生器後，有感而發製作的，希望這個配速小抄產生器能幫助到車友。"
+        配速產生器特輯後，受到啟發而製作的，希望這個配速小抄產生器能幫助到車友。"
         <div class="text-right">- 作者</div>
       </blockquote>
     </article>
