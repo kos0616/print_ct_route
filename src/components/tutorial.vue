@@ -1,6 +1,6 @@
 <template>
   <div class="md:flex gap-x-10 items-center justify-between px-5 lg:px-0">
-    <article class="w-full mb-3">
+    <article class="w-full mb-3 md:mb-0">
       <h2 class="text-2xl title">如何上手？</h2>
       <p class="mb-2">
         請至
@@ -17,26 +17,35 @@
       <p>列印後剪下，經護貝或用膠帶黏貼正反兩面即可防水。</p>
     </article>
 
-    <div class="w-full md:flex gap-x-4 justify-center">
-      <uploader @handleUpload="handleUpload" class="mb-3" />
-      <div class="text-center">
-        <button
-          :disabled="!Array.isArray(STEPS) || !STEPS.length"
-          onclick="window.print()"
-          class="btn-print"
-          title="列印小抄"
-          type="button"
+    <div class="w-full md:flex gap-x-4 justify-center text-center items-start">
+      <div class="mb-3 md:mb-0">
+        <uploader @handleUpload="handleUpload" :isUpload="isUpload" />
+        <a
+          href="https://www.ctyeh.com/routelist"
+          target="_blank"
+          class="underline text-green-700 mt-3 block"
+          title="前往 CT Yeh 公路車基地"
         >
-          <i class="fas fa-print text-2xl fa-fw" aria-hidden="true" />
-          列印小抄
-        </button>
+          Get ride_plan.csv
+        </a>
       </div>
+
+      <button
+        :disabled="!isUpload"
+        onclick="window.print()"
+        class="btn-print"
+        title="列印小抄"
+        type="button"
+      >
+        <i class="fas fa-print text-2xl fa-fw" aria-hidden="true" />
+        列印小抄
+      </button>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref, computed } from "vue";
 import uploader from "./uploader.vue";
 
 export default defineComponent({
@@ -99,7 +108,11 @@ export default defineComponent({
       }));
     };
 
-    return { handleUpload, STEPS };
+    const isUpload = computed(
+      () => Array.isArray(STEPS.value) && STEPS.value.length > 0
+    );
+
+    return { handleUpload, STEPS, isUpload };
   },
 });
 </script>

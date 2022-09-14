@@ -16,7 +16,7 @@
 
     <div
       :class="{
-        'border-b border-gray-300 border-dashed': isUpdated,
+        'border-b border-gray-300 border-dashed': isUpload,
       }"
       class="py-20"
       id="intro"
@@ -25,7 +25,7 @@
     </div>
   </div>
 
-  <div v-if="isUpdated" class="px-3 py-2 lg:p-5 print:p-0">
+  <div v-if="isUpload" class="px-3 py-2 lg:p-5 print:p-0">
     <div class="w-full overflow-x-auto xl:overflow-visible">
       <preview :modelValue="STEPS" />
     </div>
@@ -64,11 +64,11 @@ export default defineComponent({
       STEPS.value = arr;
     };
 
-    const isUpdated = computed(
-      () => Array.isArray(STEPS.value) && STEPS.value.length
+    const isUpload = computed(
+      () => Array.isArray(STEPS.value) && STEPS.value.length > 0
     );
 
-    return { handleUploaded, STEPS, isUpdated };
+    return { handleUploaded, STEPS, isUpload };
   },
 });
 </script>
