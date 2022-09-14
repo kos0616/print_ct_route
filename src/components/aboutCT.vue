@@ -39,11 +39,11 @@
           <a
             href="https://www.youtube.com/c/CTYeh"
             target="_blank"
-            title="敬請訂閱 CT Yeh 的頻道"
+            title="前往 CT Yeh 的頻道"
           >
             <img
               src="https://img.shields.io/youtube/channel/subscribers/UC5AIxJqajtl41ZxCbiuoagA?label=%E8%A8%82%E9%96%B1%E6%88%90%E9%95%B7%E4%B8%AD"
-              alt="CT Yeh 頻道的訂閱數"
+              alt="CT Yeh 頻道的訂閱人數"
               class="inline-block"
             />
           </a>
