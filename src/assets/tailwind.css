@@ -5,6 +5,11 @@
 @tailwind utilities;
 
 @layer base {
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   p {
     @apply text-gray-600 text-sm;
   }
@@ -13,7 +18,6 @@
 @layer components {
   .dec-h1::before {
     content: "";
-    
     @apply block absolute -inset-2 -skew-y-3 z-10 bg-orange-500;
   }
 
@@ -28,7 +32,15 @@
   }
 
   .btn-print {
-    @apply text-lg text-center px-4 py-3 relative rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-colors disabled:cursor-not-allowed disabled:opacity-40;
+    @apply text-lg text-center px-4 py-3 relative rounded-md bg-blue-500 text-white transition-colors;
+  }
+
+  .btn-print:disabled {
+    @apply cursor-not-allowed opacity-40;
+  }
+
+  .btn-print:hover {
+    @apply bg-blue-600
   }
 
   .title {
