@@ -18,7 +18,7 @@
         title="列印小抄"
         type="button"
       >
-        <i class="fas fa-print text-2xl fa-fw"></i>
+        <i class="fas fa-print text-2xl fa-fw" aria-hidden="true" />
         列印小抄
       </button>
     </div>

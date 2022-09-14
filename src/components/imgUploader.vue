@@ -7,7 +7,10 @@
       class="py-1 px-2 inline-block relative cursor-pointer"
       title="上傳圖片"
     >
-      <i class="far fa-image fa-fw text-gray-500"></i>
+      <i
+        class="far fa-image fa-fw text-gray-500"
+        aria-label="上傳圖片的標示"
+      ></i>
       <input
         @change="handelUpload"
         type="file"
@@ -25,7 +28,7 @@
         class="border rounded py-1 px-3 border-gray-300 hover:bg-slate-100"
         title="取消"
       >
-        <i class="fas fa-trash-alt text-red-500"></i>
+        <i class="fas fa-trash-alt text-red-500" aria-hidden="true" />
         取消
       </button>
 
@@ -35,7 +38,7 @@
         class="border rounded py-1 px-3 bg-blue-500 hover:bg-blue-600 text-white"
         title="確認"
       >
-        <i class="fas fa-check"></i>
+        <i class="fas fa-check" aria-hidden="true" />
         確認
       </button>
     </div>

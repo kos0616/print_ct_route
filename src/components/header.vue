@@ -31,7 +31,10 @@
           class="group block p-3 hover:bg-gray-300/90 transition-colors"
         >
           馬上開始
-          <i class="fas fa-chevron-down block group-hover:animate-bounce"></i>
+          <i
+            class="fas fa-chevron-down block group-hover:animate-bounce"
+            aria-hidden="true"
+          />
         </a>
       </div>
     </div>

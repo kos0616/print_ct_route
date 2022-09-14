@@ -2,12 +2,12 @@
   <article class="md:flex gap-x-10 items-center justify-between">
     <div class="w-full px-3 lg:px-0 py-5 lg:py-0">
       <h2 class="text-2xl title">
-        <i class="fas fa-edit"></i>
+        <i class="fas fa-edit" aria-hidden="true" />
         自由編輯，隨興發揮
       </h2>
       <div class="mb-5">
         <h3 class="text-xl mb-1">
-          <i class="fas fa-table fa-fw"></i>
+          <i class="fas fa-table fa-fw" aria-hidden="true" />
           表格文字
         </h3>
         <p class="pl-7">
@@ -28,7 +28,7 @@
 
       <div class="mb-5">
         <h3 class="text-xl mb-1">
-          <i class="far fa-image fa-fw text-gray-500"></i>
+          <i class="far fa-image fa-fw text-gray-500" aria-hidden="true" />
           圖片裝飾
         </h3>
         <p class="pl-7">

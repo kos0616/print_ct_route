@@ -17,8 +17,12 @@
           class="underline"
           title="前往 CT Yeh 的頻道"
         >
-          <i class="fab fa-youtube fa-fw mr-2" style="color: #ff0000"></i>CT
-          Yeh</a
+          <i
+            class="fab fa-youtube fa-fw mr-2"
+            style="color: #ff0000"
+            aria-hidden="true"
+          ></i
+          >CT Yeh</a
         >
         一切的源起
       </h2>

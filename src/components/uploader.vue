@@ -7,7 +7,7 @@
         title="上傳 ride_plan.csv"
         class="text-lg text-center px-4 py-3 relative block cursor-pointer"
       >
-        <i class="fa-solid fa-file-csv text-2xl fa-fw"></i>
+        <i class="fa-solid fa-file-csv text-2xl fa-fw" aria-hidden="true" />
         上傳 ride_plan.csv
         <input
           @change="$emit('handleUpload', $event)"
