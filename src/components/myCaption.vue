@@ -24,7 +24,7 @@
 import { defineComponent, ref } from "vue";
 import imgUploader from "./imgUploader.vue";
 
-/** 帶圖片上傳器的 caption */
+/** 帶圖片插入器的 caption */
 export default defineComponent({
   name: "caption with image uploader",
   components: { imgUploader },

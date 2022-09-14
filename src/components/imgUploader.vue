@@ -5,11 +5,11 @@
     <label
       v-if="!CROP_INST"
       class="py-1 px-2 inline-block relative cursor-pointer"
-      title="上傳圖片"
+      title="插入圖片"
     >
       <i
         class="far fa-image fa-fw text-gray-500"
-        aria-label="上傳圖片的標示"
+        aria-label="插入圖片的標示"
       ></i>
       <input
         @change="handelUpload"
@@ -50,7 +50,7 @@ import { defineComponent, onUnmounted, ref } from "vue";
 import Croppie from "croppie";
 import "croppie/croppie.css";
 
-/** 圖片上傳 */
+/** 圖片插入 */
 export default defineComponent({
   emits: ["change"],
   setup(props, { emit }) {
