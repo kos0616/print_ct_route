@@ -5,16 +5,18 @@
     <i
       class="fa-solid fa-scissors absolute left-1/2 top-0 -translate-y-1/2 rotate-90"
     />
-    <small class="block">自製分享、無廣告、無營利</small>
-    <small>
-      Copyright © 2022
-      <a
-        href="https://github.com/kos0616/print_ct_route"
-        target="_blank"
-        class="underline hover:text-cyan-500"
-      >
-        kos0616
+    <small class="block mb-2">自製分享、無廣告、無營利</small>
+    <div class="flex justify-center gap-x-4">
+      <img
+        src="https://img.shields.io/github/package-json/v/kos0616/print_ct_route?color=green"
+        alt="版本編號"
+      />
+      <a href="https://github.com/kos0616/print_ct_route" target="_blank">
+        <img
+          src="https://img.shields.io/badge/%C2%A92022-kos0616-orange"
+          alt="作者: kos0616"
+        />
       </a>
-    </small>
+    </div>
   </footer>
 </template>

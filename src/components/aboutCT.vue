@@ -31,7 +31,19 @@
         />
         " 以自行車冒險、路線分析攻略、空拍、比賽實況、訓練台、3C
         等運動科技相關議題為主，歡迎訂閱鎖定 "
-        <div class="text-right">- CT Yeh</div>
+        <div class="text-right">
+          <a
+            href="https://www.youtube.com/c/CTYeh"
+            target="_blank"
+            title="敬請訂閱 CT Yeh 的頻道"
+          >
+            <img
+              src="https://img.shields.io/youtube/channel/subscribers/UC5AIxJqajtl41ZxCbiuoagA?label=%E8%A8%82%E9%96%B1%E6%88%90%E9%95%B7%E4%B8%AD"
+              alt="CT Yeh 頻道的訂閱數"
+              class="inline-block"
+            />
+          </a>
+        </div>
       </blockquote>
 
       <blockquote
