@@ -18,9 +18,9 @@
 
 ## Todo
 
-* [ ] RWD
+* [X] RWD
 * [ ] Table Hidding function
-* [ ] Auto hide Full-size Table in mobile device
+* [X] Auto hide Full-size Table in mobile device
 * [ ] Table Styling
 * [ ] Table Pannel
 

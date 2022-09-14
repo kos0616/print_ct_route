@@ -1,13 +1,22 @@
 <template>
   <div>
     <!-- 全尺寸 -->
-    <full :STEPS="STEPS" class="mb-5" />
-    <div class="flex gap-x-14 justify-center items-start">
-      <type_A :STEPS="STEPS" class="mb-5" />
-      <type_A2 :STEPS="STEPS" class="mb-5" />
-
-      <type_B :STEPS="STEPS" />
-      <type_B2 :STEPS="STEPS" />
+    <full :STEPS="STEPS" class="mb-5 hidden md:table print:table" />
+    <div
+      class="grid grid-cols-2 md:flex print:flex gap-x-14 justify-center items-start"
+    >
+      <div>
+        <type_A :STEPS="STEPS" class="mb-5" />
+      </div>
+      <div>
+        <type_A2 :STEPS="STEPS" class="mb-5" />
+      </div>
+      <div>
+        <type_B :STEPS="STEPS" />
+      </div>
+      <div>
+        <type_B2 :STEPS="STEPS" />
+      </div>
     </div>
 
     <div class="text-center py-5 print:hidden">

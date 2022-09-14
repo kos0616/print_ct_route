@@ -1,6 +1,6 @@
 <template>
-  <div class="md:flex gap-x-10 items-center justify-between px-5 lg:px-0">
-    <article class="w-full mb-3 md:mb-0">
+  <div class="md:flex gap-x-10 items-center justify-between px-5 xl:px-0">
+    <article class="w-full sm:w-2/3 lg-w-1/2 mb-5 md:mb-0 mx-auto">
       <h2 class="text-2xl title">如何上手？</h2>
       <p class="mb-2">
         請至
@@ -17,13 +17,15 @@
       <p>列印後剪下，經護貝或用膠帶黏貼正反兩面即可防水。</p>
     </article>
 
-    <div class="w-full md:flex gap-x-4 justify-center text-center items-start">
-      <div class="mb-3 md:mb-0">
+    <div
+      class="w-full sm:w-2/3 lg-w-1/2 md:flex gap-x-4 justify-center text-center items-start mx-auto"
+    >
+      <div class="mb-5 md:mb-0">
         <uploader @handleUpload="handleUpload" :isUpload="isUpload" />
         <a
           href="https://www.ctyeh.com/routelist"
           target="_blank"
-          class="underline text-green-700 mt-3 block"
+          class="underline text-green-700 my-8 lg:mt-3 lg:mb-0 block"
           title="前往 CT Yeh 公路車基地"
         >
           Get ride_plan.csv

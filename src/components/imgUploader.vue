@@ -133,18 +133,18 @@ export default defineComponent({
 
 <style lang="postcss" scoped>
 .arrow::after {
-  @apply absolute top-1/2 right-0 w-0 h-0 mx-auto -translate-y-1/2 translate-x-full;
+  @apply absolute top-1/2 left-0 w-0 h-0 mx-auto -translate-y-1/2 -translate-x-full;
   content: "";
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-left: 7px solid #fff;
+  border-right: 7px solid #fff;
 }
 .arrow::before {
-  @apply absolute top-1/2 right-0 w-0 h-0 mx-auto -translate-y-1/2 translate-x-full transition-colors;
+  @apply absolute top-1/2 left-0 w-0 h-0 mx-auto -translate-y-1/2 -translate-x-full transition-colors;
   content: "";
   border-top: 6px solid transparent;
   border-bottom: 6px solid transparent;
-  border-left: 8px solid #ccc;
+  border-right: 8px solid #ccc;
 }
 .arrow:hover::before {
   @apply border-l-gray-400;

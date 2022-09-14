@@ -5,8 +5,8 @@
   >
     <imgUploader
       @change="handleImgUpload"
-      class="absolute left-0 top-0"
-      style="transform: translateX(calc(-100% - 10px))"
+      class="absolute right-0 top-0"
+      style="transform: translateX(calc(100% + 10px))"
       contenteditable="false"
     />
     <img

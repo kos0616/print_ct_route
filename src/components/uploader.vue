@@ -1,6 +1,6 @@
 <template>
   <div
-    class="border-green-800 rounded-lg text-white bg-green-600 hover:bg-green-700 transition-colors max-w-sm"
+    class="border-green-800 rounded-lg text-white bg-green-600 hover:bg-green-700 transition-colors"
   >
     <label
       class="text-lg text-center px-4 py-3 relative block cursor-pointer"
