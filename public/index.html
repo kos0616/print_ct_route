@@ -10,22 +10,36 @@
     />
     <title>Stem Pace 配速小抄</title>
     <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
-    <link
-      rel="stylesheet"
-      href="<%= BASE_URL %>font/CoveredByYourGrace-Regular.ttf"
-    />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="<%= BASE_URL %>css/fontawesome-free-6.2.0-web/css/all.min.css"
     />
     <link
       rel="stylesheet"
       href="<%= BASE_URL %>js/lite-youtube-embed/src/lite-yt-embed.css"
+    /> -->
+    <link
+      href="<%= BASE_URL %>js/lite-youtube-embed/src/lite-yt-embed.css"
+      rel="preload"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <link
+      href="<%= BASE_URL %>css/fontawesome-free-6.2.0-web/css/all.min.css"
+      rel="preload"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+
     <style>
       @font-face {
         font-family: "Covered By Your Grace";
-        src: url("<%= BASE_URL %>font/CoveredByYourGrace-Regular.ttf");
+        src: url("<%= BASE_URL %>font/CoveredByYourGrace-Regular.woff2")
+            format("woff2"),
+          url("<%= BASE_URL %>font/CoveredByYourGrace-Regular.woff")
+            format("woff"),
+          url("<%= BASE_URL %>font/CoveredByYourGrace-Regular.ttf")
+            format("truetype");
       }
     </style>
   </head>
