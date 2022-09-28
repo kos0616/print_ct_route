@@ -60,7 +60,7 @@
 <style lang="postcss" scoped>
 .header-banner::before {
   content: "";
-  background-image: url(../assets/img/banner.jpg);
+  background-image: url(../assets/img/banner.webp);
   filter: grayscale(0.5);
   @apply bg-no-repeat bg-center bg-cover absolute left-0 top-0 right-0 bottom-0;
 }

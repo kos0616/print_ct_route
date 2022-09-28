@@ -43,7 +43,7 @@
     </div>
 
     <figure class="w-full hidden lg:block">
-      <img src="../assets/img/sample2.jpg" alt="貼在龍頭的小抄" />
+      <img src="../assets/img/sample2.webp" alt="貼在龍頭的小抄" />
     </figure>
   </article>
 </template>

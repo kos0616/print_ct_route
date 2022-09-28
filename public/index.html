@@ -8,16 +8,22 @@
       name="google-site-verification"
       content="53CGV_hY2Q3B-Fx4lypygWKAAkxicGurs9zh_i1NLAk"
     />
+    <title>Stem Pace 配速小抄</title>
     <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&text=Stem%20Pace"
+      href="<%= BASE_URL %>font/CoveredByYourGrace-Regular.ttf"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      href="<%= BASE_URL %>css/fontawesome-free-6.2.0-web/css/all.min.css"
     />
-    <title>Stem Pace 配速小抄</title>
+    <style>
+      @font-face {
+        font-family: "Covered By Your Grace";
+        src: url("<%= BASE_URL %>font/CoveredByYourGrace-Regular.ttf");
+      }
+    </style>
   </head>
   <body>
     <div id="app"></div>
