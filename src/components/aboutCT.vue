@@ -2,6 +2,9 @@
   <div class="md:flex gap-10">
     <lite-youtube
       videoid="PRmUBohZG9c"
+      :style="{
+        'background-image': `url(${require('../assets/img/hqdefault.webp')})`,
+      }"
       class="w-full h-auto aspect-video mb-3"
     ></lite-youtube>
 
