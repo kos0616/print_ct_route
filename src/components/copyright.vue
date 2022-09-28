@@ -12,7 +12,7 @@
         class="max-w-full h-auto inline-block"
         alt="版本編號"
         width="96"
-        height="24"
+        height="20"
         loading="lazy"
       />
       <a href="https://github.com/kos0616/print_ct_route" target="_blank">
