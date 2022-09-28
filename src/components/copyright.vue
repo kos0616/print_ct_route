@@ -13,6 +13,7 @@
         alt="版本編號"
         width="96"
         height="24"
+        loading="lazy"
       />
       <a href="https://github.com/kos0616/print_ct_route" target="_blank">
         <img
@@ -21,6 +22,7 @@
           alt="作者: kos0616"
           width="106"
           height="20"
+          loading="lazy"
         />
       </a>
     </div>

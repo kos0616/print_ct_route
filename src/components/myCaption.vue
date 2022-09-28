@@ -15,6 +15,7 @@
       :src="top_img"
       class="cursor-pointer hover:opacity-50 transition-opacity"
       title="刪除圖片"
+      loading="lazy"
     />
     <br v-else />
   </caption>

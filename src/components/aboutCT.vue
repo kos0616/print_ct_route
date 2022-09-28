@@ -42,6 +42,7 @@
               class="max-w-full h-auto inline-block"
               width="116"
               height="20"
+              loading="lazy"
             />
           </a>
         </div>
