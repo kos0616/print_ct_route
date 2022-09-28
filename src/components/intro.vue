@@ -45,6 +45,8 @@
     <figure class="w-full hidden lg:block">
       <img
         src="../assets/img/sample2.webp"
+        width="492"
+        height="328"
         loading="lazy"
         alt="貼在龍頭的小抄"
       />
