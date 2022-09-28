@@ -38,7 +38,7 @@
       title="作者: kos0616"
       class="hover:underline"
     >
-      <i class="fa-brands fa-github"></i>
+      <i class="icon-github"></i>
     </a>
   </footer>
 </template>

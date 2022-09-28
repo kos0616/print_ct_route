@@ -7,11 +7,11 @@
       title="匯入 ride_plan.csv"
     >
       <template v-if="isUpload">
-        <i class="fa-solid fa-check text-2xl fa-fw" aria-hidden="true" />
+        <i class="icon-check text-2xl" aria-hidden="true" />
         匯入成功
       </template>
       <template v-else>
-        <i class="fa-solid fa-file-csv md:text-2xl fa-fw" aria-hidden="true" />
+        <i class="icon-file-text md:text-2xl" aria-hidden="true" />
         匯入 ride_plan.csv
       </template>
       <input

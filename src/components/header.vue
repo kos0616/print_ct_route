@@ -22,7 +22,7 @@
         >
           印出你的配速小抄
           <i
-            class="fa-solid fa-scissors absolute left-0 bottom-0 translate-x-3 translate-y-1/2"
+            class="icon-scissors absolute left-0 bottom-0 translate-x-3 translate-y-1/2"
           />
         </p>
         <a
@@ -32,7 +32,7 @@
         >
           馬上開始
           <i
-            class="fas fa-chevron-down block group-hover:animate-bounce"
+            class="icon-chevron-down block group-hover:animate-bounce"
             aria-hidden="true"
           />
         </a>

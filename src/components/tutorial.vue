@@ -42,7 +42,7 @@
           title="列印小抄"
           type="button"
         >
-          <i class="fas fa-print md:text-2xl fa-fw" aria-hidden="true" />
+          <i class="icon-print md:text-2xl" aria-hidden="true" />
           列印小抄
         </button>
         <a

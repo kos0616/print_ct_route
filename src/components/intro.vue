@@ -4,12 +4,12 @@
       class="w-full sm:w-2/3 lg-w-1/2 mx-auto lg:w-full px-3 xl:px-0 py-5 lg:py-0"
     >
       <h2 class="text-2xl title">
-        <i class="fas fa-edit fa-fw text-orange-500" aria-hidden="true" />
+        <i class="icon-edit text-orange-500" aria-hidden="true" />
         自由編輯，隨興發揮
       </h2>
       <div class="mb-5">
         <h3 class="text-xl mb-1">
-          <i class="fas fa-table fa-fw" aria-hidden="true" />
+          <i class="icon-table" aria-hidden="true" />
           表格文字
         </h3>
         <p class="pl-7">
@@ -30,7 +30,7 @@
 
       <div class="mb-5">
         <h3 class="text-xl mb-1">
-          <i class="far fa-image fa-fw text-gray-500" aria-hidden="true" />
+          <i class="icon-image text-gray-500" aria-hidden="true" />
           圖片裝飾
         </h3>
         <p class="pl-7">
