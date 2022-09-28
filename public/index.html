@@ -34,7 +34,9 @@
     <style>
       @font-face {
         font-family: "Covered By Your Grace";
-        src: url("<%= BASE_URL %>font/CoveredByYourGrace-Regular.woff2")
+        font-display: optional;
+        src: local("sans-serif"),
+          url("<%= BASE_URL %>font/CoveredByYourGrace-Regular.woff2")
             format("woff2"),
           url("<%= BASE_URL %>font/CoveredByYourGrace-Regular.woff")
             format("woff"),
