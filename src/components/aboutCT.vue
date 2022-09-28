@@ -1,13 +1,9 @@
 <template>
   <div class="md:flex gap-10">
-    <iframe
-      src="https://www.youtube.com/embed/PRmUBohZG9c"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
+    <lite-youtube
+      videoid="PRmUBohZG9c"
       class="w-full h-auto aspect-video mb-3"
-    />
+    ></lite-youtube>
 
     <article class="sm:w-2/3 lg:w-full pt-3 lg:pt-0 mx-auto">
       <h2 class="text-2xl title mb-3">
