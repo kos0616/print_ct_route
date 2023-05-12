@@ -36,7 +36,7 @@
     <a
       href="https://github.com/kos0616/print_ct_route"
       title="作者: kos0616"
-      class="hover:underline"
+      class="hover:underline hover:text-orange-500"
     >
       <i class="icon-github"></i>
     </a>

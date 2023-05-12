@@ -57,7 +57,7 @@
         />
         " 此站是在看了 CT Yeh 的 AI
         配速產生器特輯後，受到啟發而製作的，希望這個配速小抄產生器能幫助到車友。"
-        <div class="text-right">- 作者</div>
+        <footer class="text-right">- 作者</footer>
       </blockquote>
     </article>
   </div>
