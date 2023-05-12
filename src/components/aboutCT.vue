@@ -9,7 +9,7 @@
     ></lite-youtube>
 
     <article class="sm:w-2/3 lg:w-full pt-3 lg:pt-0 mx-auto">
-      <h2 class="text-2xl title mb-3">
+      <header class="text-2xl title mb-3">
         <i class="icon-lightbulb text-orange-500"></i>
         啟發自
         <a
@@ -20,7 +20,7 @@
           >CT Yeh</a
         >
         的配速器
-      </h2>
+      </header>
       <blockquote
         cite="https://www.youtube.com/c/CTYeh/about"
         class="border border-stone-300 border-dashed py-2 px-3 rounded-md relative"
