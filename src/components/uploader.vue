@@ -18,7 +18,7 @@
         @change="$emit('handleUpload', $event)"
         type="file"
         accept=".csv"
-        class="w-0 h-0 absolute"
+        class="w-0 h-0 absolute opacity-0"
       />
     </label>
   </div>

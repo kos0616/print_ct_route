@@ -1,5 +1,6 @@
 <template>
   <div
+    :class="{ 'z-10': CROP_INST }"
     class="print:hidden text-center border border-gray-300 hover:border-gray-400 transition-colors rounded-md arrow bg-white"
   >
     <label
@@ -12,12 +13,12 @@
         @change="handelUpload"
         type="file"
         accept="image/*"
-        class="opacity-0 w-px h-px absolute left-1/2 bottom-1/2"
+        class="opacity-0 hidden w-px h-px absolute left-1/2 bottom-1/2"
         required
       />
     </label>
 
-    <div v-show="CROP_INST" ref="REF_CROP" class="py-2 px-2"></div>
+    <div v-show="CROP_INST" ref="REF_CROP" class="z-20 py-2 px-2"></div>
     <div v-if="CROP_INST" class="text-center justify-center flex gap-x-2 pb-2">
       <button
         @click="removeCrop"
