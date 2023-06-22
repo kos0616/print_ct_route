@@ -77,7 +77,7 @@ export default defineComponent({
         /** 配瓦 */
         wattage: obj.wattage,
         /** 均速 */
-        average_speed: Math.floor(Number(obj.average_speed)),
+        average_speed: `${Math.floor(Number(obj.average_speed))}`,
         /** 區段時間 */
         segment_time: showTimer(obj.segment_time),
         /** 累計時間 */
@@ -86,7 +86,7 @@ export default defineComponent({
     });
 
     /** 簡化時間的顯示 */
-    const showTimer = (time: string) => {
+    const showTimer = (time = "") => {
       const arr = time.split(":");
       return arr[0] + ":" + arr[1];
     };
