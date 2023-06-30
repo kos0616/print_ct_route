@@ -1,0 +1,15 @@
+{
+  "name": "Stem Pace 配速小抄",
+  "short_name": "Stem Pace",
+  "icons": [
+    {
+      "src": "./assets/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#aaa"
+}
