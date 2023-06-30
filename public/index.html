@@ -55,5 +55,9 @@
       defer
       src="<%= BASE_URL %>js/lite-youtube-embed/src/lite-yt-embed.js"
     ></script>
+    <script>
+      if ("serviceWorker" in navigator)
+        navigator.serviceWorker.register("<%= BASE_URL %>sw.js");
+    </script>
   </body>
 </html>

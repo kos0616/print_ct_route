@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta
+      name="google-site-verification"
+      content="53CGV_hY2Q3B-Fx4lypygWKAAkxicGurs9zh_i1NLAk"
+    />
+    <meta name="description" content="製作你的專屬公路車配速小抄。" />
+    <meta name="theme-color" content="#f97316" />
+    <title>離線頁面: Stem Pace 配速小抄</title>
+  </head>
+  <body>
+    <h1>網路斷線中</h1>
+
+    <p>當連線恢復時，頁面會自動恢復。 或是可以點擊以下重新整理按鈕</p>
+    <button type="button">⤾ 重新整理</button>
+    <script>
+      document.querySelector("button").addEventListener("click", () => {
+        window.location.reload();
+      });
+
+      // Listen to changes in the network state, reload when online.
+      // This handles the case when the device is completely offline.
+      window.addEventListener("online", () => {
+        window.location.reload();
+      });
+
+      // Check if the server is responding & reload the page if it is.
+      // This handles the case when the device is online, but the server
+      // is offline or misbehaving.
+      async function checkNetworkAndReload() {
+        try {
+          const response = await fetch(".");
+          // Verify we get a valid response from the server
+          if (response.status >= 200 && response.status < 500) {
+            window.location.reload();
+            return;
+          }
+        } catch {
+          // Unable to connect to the server, ignore.
+        }
+        window.setTimeout(checkNetworkAndReload, 2500);
+      }
+
+      checkNetworkAndReload();
+    </script>
+  </body>
+</html>
