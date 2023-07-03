@@ -44,7 +44,9 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-
+// TODO: text color
+// TODO: row color
+// TODO: text size
 const icons = [
   "fa-star",
   "fa-flag",
