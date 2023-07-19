@@ -32,15 +32,6 @@
   </div>
 
   <copyright class="print:hidden" />
-  <footer class="print:hidden fixed right-5 bottom-5">
-    <a
-      href="https://github.com/kos0616/print_ct_route"
-      title="作者: kos0616"
-      class="hover:underline hover:text-orange-500"
-    >
-      <i class="icon-github"></i>
-    </a>
-  </footer>
 </template>
 
 <script lang="ts">
@@ -81,6 +72,7 @@ export default defineComponent({
 @media print {
   tr {
     -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
   @page {
     size: A4;

@@ -7,24 +7,42 @@
     />
     <small class="block mb-2">自製分享、無廣告、無營利</small>
     <div class="flex justify-center gap-x-4">
-      <img
-        src="https://img.shields.io/github/package-json/v/kos0616/print_ct_route?color=green"
-        class="max-w-full h-auto inline-block"
-        alt="版本編號"
-        width="96"
-        height="20"
-        loading="lazy"
-      />
+      <div>
+        <img
+          src="https://img.shields.io/github/package-json/v/kos0616/print_ct_route?color=green"
+          class="max-w-full h-auto inline-block"
+          alt="版本編號"
+          height="20"
+          loading="lazy"
+        />
+      </div>
       <a href="https://github.com/kos0616/print_ct_route" target="_blank">
         <img
           src="https://img.shields.io/badge/%C2%A92022-kos0616-orange"
           class="max-w-full h-auto inline-block"
           alt="作者: kos0616"
-          width="106"
           height="20"
           loading="lazy"
         />
       </a>
+      <a
+        href="https://github.com/kos0616/print_ct_route"
+        title="作者: kos0616"
+        class="hover:underline hover:text-orange-500"
+      >
+        <i class="icon-github"></i>
+      </a>
+      <message />
     </div>
   </footer>
 </template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+
+import message from "./message.vue";
+export default defineComponent({
+  name: "copyright",
+  components: { message },
+});
+</script>
