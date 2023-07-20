@@ -83,7 +83,7 @@ export default defineComponent({
 }
 .table.table-striped tbody > tr:nth-child(4n),
 .table.table-striped tbody > tr:nth-child(4n-1) {
-  @apply bg-sky-200;
+  background-color: var(--table-row-color);
 }
 
 .table.table-striped tbody > tr:nth-child(4n) {

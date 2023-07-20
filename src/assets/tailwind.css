@@ -5,7 +5,6 @@
 @tailwind utilities;
 
 @layer base {
-
   html {
     scroll-behavior: smooth;
   }
@@ -14,8 +13,11 @@
     @apply text-gray-600 text-sm;
   }
 
-  ol>li {
+  ol > li {
     @apply mb-2 text-gray-600 text-sm;
+  }
+  :root {
+    --table-row-color: rgb(186, 230, 253);
   }
 }
 
@@ -44,7 +46,7 @@
   }
 
   .btn-print:hover {
-    @apply bg-blue-600
+    @apply bg-blue-600;
   }
 
   .title {

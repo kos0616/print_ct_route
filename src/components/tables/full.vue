@@ -110,6 +110,6 @@ export default defineComponent({
   @apply py-3 px-2 whitespace-nowrap border-y border-gray-600;
 }
 .table.table-striped tbody > tr:nth-child(2n) {
-  @apply bg-sky-200;
+  background-color: var(--table-row-color);
 }
 </style>

@@ -78,7 +78,7 @@ export default defineComponent({
   @apply py-0 px-1 whitespace-nowrap border-y border-gray-600;
 }
 .table.table-striped tbody > tr:nth-child(2n) {
-  @apply bg-sky-200;
+  background-color: var(--table-row-color);
 }
 
 .table.table-striped tbody > tr:first-child {
