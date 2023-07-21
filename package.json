@@ -1,6 +1,6 @@
 {
   "name": "print_ct_route",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -14,7 +14,7 @@
     "dayjs": "^1.11.5",
     "postcss": "^8.4.16",
     "sweetalert2": "^11.7.18",
-    "tailwindcss": "^3.1.8",
+    "tailwindcss": "^3.3.3",
     "vue": "^3.2.13"
   },
   "devDependencies": {
