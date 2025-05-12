@@ -127,7 +127,7 @@ export default defineComponent({
           return { start: matchType_1[1], end: matchType_1[2] };
         }
 
-        const matchType_2 = /(\S+?)-(\S+)/g.exec(str);
+        const matchType_2 = /(\S+?)[-_](\S+)/g.exec(str);
         if (matchType_2 !== null) {
           return { start: matchType_2[1], end: matchType_2[2] };
         }
