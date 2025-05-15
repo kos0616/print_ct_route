@@ -17,7 +17,7 @@
       title="刪除圖片"
       loading="lazy"
     />
-    <br v-else />
+    <div v-else>&nbsp;</div>
   </caption>
 </template>
 
