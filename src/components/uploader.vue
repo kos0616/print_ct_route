@@ -12,7 +12,7 @@
       </template>
       <template v-else>
         <i class="icon-file-text md:text-2xl" aria-hidden="true" />
-        匯入 ride_plan.csv
+        匯入 配速產生器.csv
       </template>
       <input
         @change="$emit('handleUpload', $event)"

@@ -65,6 +65,11 @@ export default defineComponent({
         case "最高小七":
           return "小七";
 
+        case "中心碑":
+          return "中心";
+
+        case "人止關":
+          return "人止";
         default:
           return str;
       }
