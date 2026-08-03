@@ -21,7 +21,11 @@
       class="py-10"
       id="intro"
     >
-      <tutorial @upload="handleUploaded" class="mx-auto max-w-5xl" />
+      <tutorial
+        @upload="handleUploaded"
+        :isUpload="isUpload"
+        class="mx-auto max-w-5xl"
+      />
     </div>
   </div>
 

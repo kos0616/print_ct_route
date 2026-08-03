@@ -81,6 +81,14 @@ test("兩張 A 表顯示不同的指標欄位", async ({ page }) => {
   await expect(table(page, 2).locator("tbody")).not.toContainText("k/h");
 });
 
+test("上傳後教學區反映上傳狀態", async ({ page }) => {
+  // tutorial.vue 的 isUpload 由 App.vue 經 prop 傳入（它自己不持有 STEPS）。
+  // prop 若斷掉，這兩個都會停在未上傳的樣子，而其他測試只看 #printer 抓不到。
+  // 用 title 定位 uploader 的 label，避免命中教學文字裡的「匯入成功可在底下預覽與編輯」
+  await expect(page.getByTitle("匯入 ride_plan.csv")).toContainText("匯入成功");
+  await expect(page.locator("#intro").getByTitle("列印小抄")).toBeEnabled();
+});
+
 test("full 表的日期為 YYYY/MM/DD 補零格式", async ({ page }) => {
   // 這一格在視覺快照中被 mask 遮住，格式退化（例如 2026/8/3）快照抓不到，
   // 必須獨立斷言 —— 否則日期實作換掉時沒有任何測試會發現。

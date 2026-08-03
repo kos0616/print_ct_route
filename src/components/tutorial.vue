@@ -82,16 +82,20 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed } from "vue";
+import { defineComponent } from "vue";
 import uploader from "./uploader.vue";
 
 export default defineComponent({
   components: { uploader },
+  props: {
+    /** 由 App.vue 持有的上傳狀態，本元件不自行保存 STEPS */
+    isUpload: {
+      type: Boolean,
+      default: false,
+    },
+  },
   setup(props, { emit }) {
-    /** 區段 */
-    const STEPS = ref<STEP[]>([]);
-
-    /** 讀取 .csv 檔案 並放在 STEPS */
+    /** 讀取 .csv 檔案 並 emit 給父層 */
     const handleUpload = (event: Event) => {
       const target = event.target as HTMLInputElement;
       const files = target.files;
@@ -102,7 +106,7 @@ export default defineComponent({
       loadCSV(file);
     };
 
-    /** 讀取 CSV，將其放在 STEPS*/
+    /** 讀取 CSV，解析後 emit 給父層 */
     const loadCSV = (file: File) => {
       const reader = new FileReader();
       reader.readAsText(file);
@@ -125,10 +129,9 @@ export default defineComponent({
         const result = DATAS.map((str) => str.split(",")).filter(
           (n) => n.length > 1
         );
-        STEPS.value = formatCSV(result);
+        const steps = formatCSV(result);
 
-        if (Array.isArray(STEPS.value) && STEPS.value.length)
-          emit("upload", STEPS.value);
+        if (steps.length) emit("upload", steps);
       };
     };
 
@@ -159,11 +162,7 @@ export default defineComponent({
       }
     };
 
-    const isUpload = computed(
-      () => Array.isArray(STEPS.value) && STEPS.value.length > 0
-    );
-
-    return { handleUpload, STEPS, isUpload };
+    return { handleUpload };
   },
 });
 </script>
