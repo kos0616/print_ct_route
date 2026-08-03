@@ -1,5 +1,25 @@
 # IcoMoon 字型更新操作指南（人工步驟）
 
+> **✅ 已於 2026-08-03 執行完畢**（commit `fc1c4c2`）。本文保留作為「日後要再新增 icon」的操作參考。
+>
+> **實際結果與本文預期的差異**：
+>
+> | 項目 | 指南預期 | 實際 |
+> |---|---|---|
+> | `fa-fill` | `icon-fill` | **`icon-paint-brush`**（畫筆代油漆桶） |
+> | `fa-arrow-trend-up/down` | `icon-arrow-trend-up/down` | **`icon-trending_up` / `icon-trending_down`**（底線，非連字號） |
+> | `fa-utensils` | `icon-utensils` | **`icon-cutlery`**（FA4 舊名） |
+> | `fa-envelope` | `icon-envelope` | **`icon-envelope-o`** |
+> | `fa-truck-droplet` | 找替代圖 | **併入 `icon-droplet`**，區段標記由 8 個減為 7 個 |
+> | `.icon-fw` 寬度 | `1.28571429em`（FA4 值） | **`1.25em`**（FA6 實際值） |
+>
+> **驗證結果**：既有 15 個 icon 的 codepoint 逐一比對零位移；Playwright 5 tests passed；另以五張截圖目視確認所有 icon 正確渲染（非豆腐字）。
+>
+> **順帶發現**：新版 `style.css` 已不再引用 `.eot`，原 `fonts/icomoon.eot` 成為孤兒檔，已一併刪除。
+>
+> **注意**：視覺快照 `printer-win32.png` 涵蓋的是 `#printer` 區域，該區只有 `myCaption` 的 `icon-image` 是常駐 icon。`tableEditor`（hover 才出現）、`allEditor`（在 `#printer` 之外）、`step.icon`（初始為空）都**不在快照範圍內**——所以這次快照沒變並不代表 icon 無誤，目視驗證是必要的。日後再動 icon 時請沿用同樣做法。
+
+
 **目的**：把專案目前用到的 14 個 Font Awesome icon 併進現有的 IcoMoon 字型，之後即可刪除整個 `public/css/fontawesome-free-6.2.0-web/`（1.4MB），全站只剩一套 icon 系統。
 
 **為什麼需要人工**：IcoMoon 的字型產生是網頁服務，沒有官方 CLI；而且 `public/css/fontawesome-free-6.2.0-web/` 是 web 發行包，裡面只有打包好的字型檔與 CSS，**沒有個別 SVG 原始檔**，所以連素材都得從 IcoMoon 內建的 Font Awesome 集取得。這一段 AI 代勞不了。
