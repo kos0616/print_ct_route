@@ -54,7 +54,6 @@ export default defineComponent({
   setup(props, { emit }) {
     const REF_CROP = ref(null as HTMLElement | null);
     const CROP_INST = ref(null as null | Croppie);
-    const CROP_RESULT = ref("");
 
     const handelUpload = (e: Event) => {
       const target = e.target as HTMLInputElement;
@@ -111,7 +110,6 @@ export default defineComponent({
       if (CROP_INST.value) {
         CROP_INST.value?.destroy();
         CROP_INST.value = null;
-        CROP_RESULT.value = "";
       }
     };
 
@@ -121,7 +119,6 @@ export default defineComponent({
       REF_CROP,
       handelUpload,
       getCrop,
-      CROP_RESULT,
       CROP_INST,
       removeCrop,
     };

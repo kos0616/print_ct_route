@@ -116,7 +116,7 @@ export default defineComponent({
       initSticky();
     });
 
-    return { STEPS, formatPlaceName, REF_MENU };
+    return { STEPS, REF_MENU };
   },
 });
 </script>
