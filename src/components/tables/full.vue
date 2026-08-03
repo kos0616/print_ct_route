@@ -65,7 +65,6 @@
 
 <script lang="ts">
 import { defineComponent, PropType, toRef } from "vue";
-import DAY from "dayjs";
 import editor from "../tableEditor.vue";
 import { useSteps } from "@/composables/useSteps";
 
@@ -80,7 +79,12 @@ export default defineComponent({
   },
   setup(props) {
     return {
-      now: DAY().format("YYYY/MM/DD"),
+      // 2-digit 是必要的，預設會輸出 2026/8/3 而非 2026/08/03，表格寬度會跳動
+      now: new Date().toLocaleDateString("zh-TW", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+      }),
       ...useSteps(toRef(props, "STEPS")),
     };
   },

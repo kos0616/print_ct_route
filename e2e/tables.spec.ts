@@ -80,3 +80,11 @@ test("兩張 A 表顯示不同的指標欄位", async ({ page }) => {
   await expect(table(page, 2).locator("tbody")).toContainText("w");
   await expect(table(page, 2).locator("tbody")).not.toContainText("k/h");
 });
+
+test("full 表的日期為 YYYY/MM/DD 補零格式", async ({ page }) => {
+  // 這一格在視覺快照中被 mask 遮住，格式退化（例如 2026/8/3）快照抓不到，
+  // 必須獨立斷言 —— 否則日期實作換掉時沒有任何測試會發現。
+  await expect(page.locator("#printer caption .ml-auto").first()).toHaveText(
+    /^\d{4}\/\d{2}\/\d{2}$/
+  );
+});
