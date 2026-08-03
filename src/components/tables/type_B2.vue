@@ -33,9 +33,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, ref, watch } from "vue";
+import { defineComponent, PropType, toRef } from "vue";
 import myCaption from "../myCaption.vue";
 import editor from "../tableEditor.vue";
+import { useSteps } from "@/composables/useSteps";
 
 export default defineComponent({
   components: { myCaption, editor },
@@ -46,27 +47,7 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const MY_STEPS = ref<Array<STEP & { icon?: string }>>([]);
-
-    const active = ref<number | null>(null);
-
-    /** 加入icon 若 icon 為同個圖樣，則移除 */
-    const handleGetIcon = (icon: string) => {
-      let newIcon = icon;
-      if (active.value === null) return;
-      if (MY_STEPS.value[active.value].icon === newIcon) newIcon = "";
-      MY_STEPS.value[active.value].icon = newIcon;
-    };
-
-    watch(
-      () => props.STEPS,
-      (v) => {
-        MY_STEPS.value = v.map((d) => ({ ...d }));
-      },
-      { immediate: true }
-    );
-
-    return { MY_STEPS, active, handleGetIcon };
+    return useSteps(toRef(props, "STEPS"));
   },
 });
 </script>

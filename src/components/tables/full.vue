@@ -64,9 +64,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, ref, watch } from "vue";
+import { defineComponent, PropType, toRef } from "vue";
 import DAY from "dayjs";
 import editor from "../tableEditor.vue";
+import { useSteps } from "@/composables/useSteps";
 
 /** 全幅版面 */
 export default defineComponent({
@@ -77,30 +78,11 @@ export default defineComponent({
       default: () => [],
     },
   },
-  setup: (props) => {
-    const now = DAY().format("YYYY/MM/DD");
-
-    const MY_STEPS = ref<Array<STEP & { icon?: string }>>([]);
-
-    const active = ref<number | null>(null);
-
-    /** 加入icon 若 icon 為同個圖樣，則移除 */
-    const handleGetIcon = (icon: string) => {
-      let newIcon = icon;
-      if (active.value === null) return;
-      if (MY_STEPS.value[active.value].icon === newIcon) newIcon = "";
-      MY_STEPS.value[active.value].icon = newIcon;
+  setup(props) {
+    return {
+      now: DAY().format("YYYY/MM/DD"),
+      ...useSteps(toRef(props, "STEPS")),
     };
-
-    watch(
-      () => props.STEPS,
-      (v) => {
-        MY_STEPS.value = v.map((d) => ({ ...d }));
-      },
-      { immediate: true }
-    );
-
-    return { now, MY_STEPS, active, handleGetIcon };
   },
 });
 </script>
