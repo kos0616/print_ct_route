@@ -14,8 +14,6 @@ import { defineComponent, ref } from "vue";
 
 export default defineComponent({
   setup() {
-    const color = ref("");
-
     const changeColor = (e: Event) => {
       document.documentElement.style.setProperty(
         "--table-row-color",
@@ -34,7 +32,7 @@ export default defineComponent({
       dom.style.fontSize = SIZE[activeSize.value];
     };
 
-    return { color, changeFontSize, changeColor };
+    return { changeFontSize, changeColor };
   },
 });
 </script>
