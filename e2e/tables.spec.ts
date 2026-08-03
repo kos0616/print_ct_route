@@ -57,20 +57,20 @@ test("加 icon 只影響被操作的那一張表，再點一次會移除", async
 
   await a.locator("tbody tr").first().hover();
   await a.getByTitle("加入icon").click();
-  // icons 陣列第一個是 fa-star
+  // icons 陣列第一個是 icon-star
   await a.locator(".arrow .grid-cols-2 button").first().click();
 
   // 移開滑鼠讓 editor 收起，避免把 editor 內的 icon 也數進去
   await page.mouse.move(5, 5);
-  await expect(a.locator("tbody i.fa-star")).toHaveCount(1);
-  await expect(a2.locator("tbody i.fa-star")).toHaveCount(0);
+  await expect(a.locator("tbody i.icon-star")).toHaveCount(1);
+  await expect(a2.locator("tbody i.icon-star")).toHaveCount(0);
 
   // 點同一個 icon 應該取消
   await a.locator("tbody tr").first().hover();
   await a.getByTitle("加入icon").click();
   await a.locator(".arrow .grid-cols-2 button").first().click();
   await page.mouse.move(5, 5);
-  await expect(a.locator("tbody i.fa-star")).toHaveCount(0);
+  await expect(a.locator("tbody i.icon-star")).toHaveCount(0);
 });
 
 test("兩張 A 表顯示不同的指標欄位", async ({ page }) => {

@@ -22,7 +22,7 @@
         :key="`step_${i}`"
       >
         <td class="text-center">
-          <i v-if="step.icon" :class="step.icon" class="fas text-xs fa-fw" />{{
+          <i v-if="step.icon" :class="step.icon" class="text-xs icon-fw" />{{
             step.start || "-"
           }}
         </td>

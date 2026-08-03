@@ -71,11 +71,11 @@
     <article>
       <h2 class="text-xl title mb-2">編輯區使用教學</h2>
       <p>編輯區內的所有文字都可自由編輯，包含表格的標題與內容。</p>
-      <p><i class="fa-solid fa-fill"></i> 改變表格顏色</p>
-      <p><i class="fa-solid fa-text-height"></i> 改變文字大小</p>
+      <p><i class="icon-paint-brush"></i> 改變表格顏色</p>
+      <p><i class="icon-text-height"></i> 改變文字大小</p>
       <p><i class="icon-image"></i> 為表格加入圖片</p>
-      <p><i class="fa-solid fa-plus"></i> 新增一列表格</p>
-      <p><i class="fa-solid fa-trash-alt"></i> 刪除一列表格</p>
+      <p><i class="icon-plus"></i> 新增一列表格</p>
+      <p><i class="icon-trash"></i> 刪除一列表格</p>
       <p><i>icon</i> 為該區段加上標記</p>
     </article>
   </div>

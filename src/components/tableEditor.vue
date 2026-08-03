@@ -12,14 +12,14 @@
         title="增加列"
         class="p-1 hover:text-green-600"
       >
-        <i class="fa-solid fa-plus fa-fw"></i>
+        <i class="icon-plus icon-fw"></i>
       </button>
       <button
         @click="$emit('remove')"
         title="刪除列"
         class="p-1 hover:text-red-500"
       >
-        <i class="fa-solid fa-trash-can fa-fw"></i>
+        <i class="icon-trash icon-fw"></i>
       </button>
       <button
         @click="iconOpened = !iconOpened"
@@ -35,7 +35,7 @@
           :key="`icon${i}`"
           class="hover:text-orange-500"
         >
-          <i :class="css" class="fas fa-fw"></i>
+          <i :class="css" class="icon-fw"></i>
         </button>
       </div>
     </div>
@@ -45,14 +45,14 @@
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 const icons = [
-  "fa-star",
-  "fa-flag",
-  "fa-solid fa-arrow-trend-up",
-  "fa-arrow-trend-down",
-  "fa-droplet",
-  "fa-utensils",
-  "fa-truck-droplet",
-  "fa-truck",
+  "icon-star",
+  "icon-flag",
+  "icon-trending_up",
+  "icon-trending_down",
+  /** 水／補水（IcoMoon 無水車圖，此項一併涵蓋原本的 truck-droplet） */
+  "icon-droplet",
+  "icon-cutlery",
+  "icon-truck",
 ];
 
 export default defineComponent({

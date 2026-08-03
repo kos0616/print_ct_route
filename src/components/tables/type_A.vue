@@ -9,11 +9,9 @@
       <template v-for="(step, i) in MY_STEPS" :key="`step_${i}`">
         <tr @mouseover="active = i">
           <td>
-            <i
-              v-if="step.icon"
-              :class="step.icon"
-              class="fas text-xs fa-fw"
-            />{{ step.end || "-" }}
+            <i v-if="step.icon" :class="step.icon" class="text-xs icon-fw" />{{
+              step.end || "-"
+            }}
           </td>
           <td class="relative text-right">
             {{ step.cumulative_distance || "0" }}<small>k</small>

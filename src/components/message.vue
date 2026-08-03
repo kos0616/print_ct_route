@@ -4,7 +4,7 @@
     title="留言給我"
     class="hover:text-orange-400 text-sm"
   >
-    <i class="fa-regular fa-comment fa-fw"></i>
+    <i class="icon-comment icon-fw"></i>
     留言
   </button>
   <div
@@ -20,7 +20,7 @@
           title="關閉"
           class="px-3 hover:text-orange-400 absolute top-0 right-0"
         >
-          <i class="fas fa-times"></i>
+          <i class="icon-times"></i>
         </button>
         <form @submit.prevent="handleSubmit">
           <label for="message" class="block mb-3">留言給作者</label>
@@ -95,7 +95,7 @@ export default defineComponent({
             title: "被玩壞了... :-(",
             html:
               "留言功能故障了，如果您方便的話，請直接寄信告知我，謝謝\n" +
-              '<a class="hover:bg-gray-100 my-2 py-2 border block rounded" href="mailto:javert0616@gmail.com"><i class="fas fa-envelope fa-fw"></i>Email</a>',
+              '<a class="hover:bg-gray-100 my-2 py-2 border block rounded" href="mailto:javert0616@gmail.com"><i class="icon-envelope-o icon-fw"></i>Email</a>',
           });
           // Handle any errors that occurred during the fetch
         });

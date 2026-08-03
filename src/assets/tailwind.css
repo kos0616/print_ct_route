@@ -22,6 +22,13 @@
 }
 
 @layer components {
+  /* 取代 Font Awesome 的 .fa-fw：讓 icon 等寬對齊 */
+  .icon-fw {
+    width: 1.25em;
+    text-align: center;
+    display: inline-block;
+  }
+
   .dec-h1::before {
     content: "";
     @apply block absolute -inset-2 -skew-y-3 z-10 bg-orange-500;

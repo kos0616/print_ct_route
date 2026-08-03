@@ -2,10 +2,10 @@
   <nav class="flex justify-center mx-auto">
     <label title="變更表格顏色" class="menu-item">
       <input @input="changeColor" type="color" class="invisible w-0 h-0" />
-      <i class="fa-solid fa-fill" style="color: var(--table-row-color)"></i>
+      <i class="icon-paint-brush" style="color: var(--table-row-color)"></i>
     </label>
     <button title="變更文字大小" @click="changeFontSize" class="menu-item">
-      <i class="fa-solid fa-text-height"></i>
+      <i class="icon-text-height"></i>
     </button>
   </nav>
 </template>
