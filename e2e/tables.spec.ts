@@ -73,12 +73,18 @@ test("加 icon 只影響被操作的那一張表，再點一次會移除", async
   await expect(a.locator("tbody i.icon-star")).toHaveCount(0);
 });
 
-test("兩張 A 表顯示不同的指標欄位", async ({ page }) => {
-  // A 顯示均速 k/h，A2 顯示配瓦 w
-  await expect(table(page, 1).locator("tbody")).toContainText("k/h");
-  await expect(table(page, 1).locator("tbody")).not.toContainText("w");
-  await expect(table(page, 2).locator("tbody")).toContainText("w");
-  await expect(table(page, 2).locator("tbody")).not.toContainText("k/h");
+test("四張小表各自顯示正確的指標數值", async ({ page }) => {
+  // 必須斷言「數值」而非只看單位標籤：若 template 誤把值寫死成 average_speed
+  // 而單位仍隨 metric 變動，只檢查 k/h 與 w 的版本會假陽性通過。
+  // fixture 第一段：均速 24.61 → preview 的 Math.floor → 24；配瓦 180。
+  for (const i of [1, 3]) {
+    await expect(table(page, i).locator("tbody")).toContainText("24k/h");
+    await expect(table(page, i).locator("tbody")).not.toContainText("w");
+  }
+  for (const i of [2, 4]) {
+    await expect(table(page, i).locator("tbody")).toContainText("180w");
+    await expect(table(page, i).locator("tbody")).not.toContainText("k/h");
+  }
 });
 
 test("上傳後教學區反映上傳狀態", async ({ page }) => {
