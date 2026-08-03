@@ -2,6 +2,10 @@
 node_modules
 /dist
 
+# Playwright
+/test-results
+/playwright-report
+
 node_modules.nosync
 
 # local env files

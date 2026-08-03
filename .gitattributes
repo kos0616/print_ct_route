@@ -1,0 +1,2 @@
+# tutorial.vue 的 loadCSV 以 \r\n 切列，此 fixture 必須在任何平台 checkout 都是 CRLF
+e2e/fixtures/ride_plan.csv text eol=crlf
