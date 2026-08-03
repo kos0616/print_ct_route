@@ -16,7 +16,7 @@
             />{{ step.cumulative_distance || "0" }}<small>k</small>
           </td>
           <td class="text-right">
-            {{ step.average_speed || "0" }}<small>k/h</small>
+            {{ step[metric] || "0" }}<small>{{ METRIC_UNIT[metric] }}</small>
           </td>
           <td class="relative">
             {{ step.cumulative_time || "00:00" }}
@@ -38,7 +38,7 @@
 import { defineComponent, PropType, toRef } from "vue";
 import myCaption from "../myCaption.vue";
 import editor from "../tableEditor.vue";
-import { useSteps } from "@/composables/useSteps";
+import { useSteps, METRIC_UNIT, type Metric } from "@/composables/useSteps";
 
 export default defineComponent({
   components: { myCaption, editor },
@@ -47,9 +47,14 @@ export default defineComponent({
       type: Array as PropType<STEP[]>,
       default: () => [],
     },
+    /** 第二列右格顯示哪個指標 */
+    metric: {
+      type: String as PropType<Metric>,
+      default: "average_speed",
+    },
   },
   setup(props) {
-    return useSteps(toRef(props, "STEPS"));
+    return { ...useSteps(toRef(props, "STEPS")), METRIC_UNIT };
   },
 });
 </script>

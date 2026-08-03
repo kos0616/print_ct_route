@@ -10,16 +10,16 @@
         class="grid grid-cols-2 md:flex print:flex gap-x-14 justify-center items-start"
       >
         <div>
-          <type_A :STEPS="STEPS" class="mb-5" />
+          <type_A :STEPS="STEPS" metric="average_speed" class="mb-5" />
         </div>
         <div>
-          <type_A2 :STEPS="STEPS" class="mb-5" />
+          <type_A :STEPS="STEPS" metric="wattage" class="mb-5" />
         </div>
         <div>
-          <type_B :STEPS="STEPS" />
+          <type_B :STEPS="STEPS" metric="average_speed" />
         </div>
         <div>
-          <type_B2 :STEPS="STEPS" />
+          <type_B :STEPS="STEPS" metric="wattage" />
         </div>
       </div>
     </div>
@@ -44,14 +44,12 @@
 import { computed, defineComponent, PropType, onMounted, ref } from "vue";
 import full from "./tables/full.vue";
 import type_A from "./tables/type_A.vue";
-import type_A2 from "./tables/type_A2.vue";
 import type_B from "./tables/type_B.vue";
-import type_B2 from "./tables/type_B2.vue";
 import allEditor from "./allEditor.vue";
 
 export default defineComponent({
   name: "print preview",
-  components: { full, type_A, type_A2, type_B, type_B2, allEditor },
+  components: { full, type_A, type_B, allEditor },
   props: {
     modelValue: {
       type: Array as PropType<STEP[]>,
